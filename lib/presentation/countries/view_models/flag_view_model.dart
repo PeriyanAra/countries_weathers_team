@@ -14,22 +14,23 @@ class FlagViewModel with _$FlagViewModel {
 
   factory FlagViewModel.fromJson(Map<String, dynamic> json) => _$FlagViewModelFromJson(json);
 
-   const FlagViewModel._();
+  const FlagViewModel._();
 
- FlagEntity toEntity() {
+  FlagEntity toEntity() {
     return FlagEntity(
       png: png,
       svg: svg,
-      alt: alt
+      alt: alt,
     );
   }
 
   factory FlagViewModel.fromEntity(
-      FlagEntity flagEntity) {
+    FlagEntity flagEntity,
+  ) {
     return FlagViewModel(
       png: flagEntity.png,
       svg: flagEntity.svg,
-      alt: flagEntity.alt
+      alt: flagEntity.alt,
     );
   }
 }

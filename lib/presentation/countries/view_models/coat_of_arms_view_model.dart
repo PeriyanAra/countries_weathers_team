@@ -11,10 +11,11 @@ class CoatOfArmsViewModel with _$CoatOfArmsViewModel {
     required String svg,
   }) = _CoatOfArmsViewModel;
 
-  factory CoatOfArmsViewModel.fromJson(Map<String, dynamic> json) => _$CoatOfArmsViewModelFromJson(json);
+  factory CoatOfArmsViewModel.fromJson(Map<String, dynamic> json) =>
+      _$CoatOfArmsViewModelFromJson(json);
   const CoatOfArmsViewModel._();
 
- CoatOfArmsEntity toEntity() {
+  CoatOfArmsEntity toEntity() {
     return CoatOfArmsEntity(
       png: png,
       svg: svg,
@@ -22,7 +23,8 @@ class CoatOfArmsViewModel with _$CoatOfArmsViewModel {
   }
 
   factory CoatOfArmsViewModel.fromEntity(
-      CoatOfArmsEntity coatOfArmsEntity) {
+    CoatOfArmsEntity coatOfArmsEntity,
+  ) {
     return CoatOfArmsViewModel(
       png: coatOfArmsEntity.png,
       svg: coatOfArmsEntity.svg,
