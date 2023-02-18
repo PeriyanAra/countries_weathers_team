@@ -40,19 +40,21 @@ class CountryViewModel with _$CountryViewModel {
     );
   }
 
-  factory CountryViewModel.fromEntity(CountryEntity coatOfArmsEntity) {
+  factory CountryViewModel.fromEntity({
+    required CountryEntity countryEntity,
+  }) {
     return CountryViewModel(
-      name: NameViewModel.fromEntity(coatOfArmsEntity.name),
-      countryCode: coatOfArmsEntity.countryCode,
-      capital: coatOfArmsEntity.capital,
-      region: coatOfArmsEntity.region,
-      subregion: coatOfArmsEntity.subregion,
-      area: coatOfArmsEntity.area,
-      flag: coatOfArmsEntity.flag,
-      population: coatOfArmsEntity.population,
-      continents: coatOfArmsEntity.continents,
-      flags: FlagViewModel.fromEntity(coatOfArmsEntity.flags),
-      coatOfArms: CoatOfArmsViewModel.fromEntity(coatOfArmsEntity.coatOfArms),
+      name: NameViewModel.fromEntity(countryEntity.name),
+      countryCode: countryEntity.countryCode,
+      capital: countryEntity.capital,
+      region: countryEntity.region,
+      subregion: countryEntity.subregion,
+      area: countryEntity.area,
+      flag: countryEntity.flag,
+      population: countryEntity.population,
+      continents: countryEntity.continents,
+      flags: FlagViewModel.fromEntity(countryEntity.flags),
+      coatOfArms: CoatOfArmsViewModel.fromEntity(countryEntity.coatOfArms),
     );
   }
 }
