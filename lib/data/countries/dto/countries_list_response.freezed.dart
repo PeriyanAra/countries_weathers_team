@@ -14,10 +14,16 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
+CountriesListResponse _$CountriesListResponseFromJson(
+    Map<String, dynamic> json) {
+  return _CountriesListResponse.fromJson(json);
+}
+
 /// @nodoc
 mixin _$CountriesListResponse {
-  String get firstName => throw _privateConstructorUsedError;
+  List<CountryResponse> get countryList => throw _privateConstructorUsedError;
 
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $CountriesListResponseCopyWith<CountriesListResponse> get copyWith =>
       throw _privateConstructorUsedError;
@@ -29,7 +35,7 @@ abstract class $CountriesListResponseCopyWith<$Res> {
           $Res Function(CountriesListResponse) then) =
       _$CountriesListResponseCopyWithImpl<$Res, CountriesListResponse>;
   @useResult
-  $Res call({String firstName});
+  $Res call({List<CountryResponse> countryList});
 }
 
 /// @nodoc
@@ -46,13 +52,13 @@ class _$CountriesListResponseCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? firstName = null,
+    Object? countryList = null,
   }) {
     return _then(_value.copyWith(
-      firstName: null == firstName
-          ? _value.firstName
-          : firstName // ignore: cast_nullable_to_non_nullable
-              as String,
+      countryList: null == countryList
+          ? _value.countryList
+          : countryList // ignore: cast_nullable_to_non_nullable
+              as List<CountryResponse>,
     ) as $Val);
   }
 }
@@ -65,7 +71,7 @@ abstract class _$$_CountriesListResponseCopyWith<$Res>
       __$$_CountriesListResponseCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String firstName});
+  $Res call({List<CountryResponse> countryList});
 }
 
 /// @nodoc
@@ -79,28 +85,38 @@ class __$$_CountriesListResponseCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? firstName = null,
+    Object? countryList = null,
   }) {
     return _then(_$_CountriesListResponse(
-      firstName: null == firstName
-          ? _value.firstName
-          : firstName // ignore: cast_nullable_to_non_nullable
-              as String,
+      countryList: null == countryList
+          ? _value._countryList
+          : countryList // ignore: cast_nullable_to_non_nullable
+              as List<CountryResponse>,
     ));
   }
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_CountriesListResponse implements _CountriesListResponse {
-  const _$_CountriesListResponse({required this.firstName});
+  const _$_CountriesListResponse(
+      {required final List<CountryResponse> countryList})
+      : _countryList = countryList;
 
+  factory _$_CountriesListResponse.fromJson(Map<String, dynamic> json) =>
+      _$$_CountriesListResponseFromJson(json);
+
+  final List<CountryResponse> _countryList;
   @override
-  final String firstName;
+  List<CountryResponse> get countryList {
+    if (_countryList is EqualUnmodifiableListView) return _countryList;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_countryList);
+  }
 
   @override
   String toString() {
-    return 'CountriesListResponse(firstName: $firstName)';
+    return 'CountriesListResponse(countryList: $countryList)';
   }
 
   @override
@@ -108,12 +124,14 @@ class _$_CountriesListResponse implements _CountriesListResponse {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_CountriesListResponse &&
-            (identical(other.firstName, firstName) ||
-                other.firstName == firstName));
+            const DeepCollectionEquality()
+                .equals(other._countryList, _countryList));
   }
 
+  @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, firstName);
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_countryList));
 
   @JsonKey(ignore: true)
   @override
@@ -121,14 +139,25 @@ class _$_CountriesListResponse implements _CountriesListResponse {
   _$$_CountriesListResponseCopyWith<_$_CountriesListResponse> get copyWith =>
       __$$_CountriesListResponseCopyWithImpl<_$_CountriesListResponse>(
           this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_CountriesListResponseToJson(
+      this,
+    );
+  }
 }
 
 abstract class _CountriesListResponse implements CountriesListResponse {
-  const factory _CountriesListResponse({required final String firstName}) =
+  const factory _CountriesListResponse(
+          {required final List<CountryResponse> countryList}) =
       _$_CountriesListResponse;
 
+  factory _CountriesListResponse.fromJson(Map<String, dynamic> json) =
+      _$_CountriesListResponse.fromJson;
+
   @override
-  String get firstName;
+  List<CountryResponse> get countryList;
   @override
   @JsonKey(ignore: true)
   _$$_CountriesListResponseCopyWith<_$_CountriesListResponse> get copyWith =>
