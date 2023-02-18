@@ -1,3 +1,4 @@
+import 'package:countries_and_weathers/domain/countries/entity/export.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'flag_view_model.freezed.dart';
@@ -12,4 +13,23 @@ class FlagViewModel with _$FlagViewModel {
   }) = _FlagViewModel;
 
   factory FlagViewModel.fromJson(Map<String, dynamic> json) => _$FlagViewModelFromJson(json);
+
+   const FlagViewModel._();
+
+ FlagEntity toEntity() {
+    return FlagEntity(
+      png: png,
+      svg: svg,
+      alt: alt
+    );
+  }
+
+  factory FlagViewModel.fromEntity(
+      FlagEntity flagEntity) {
+    return FlagViewModel(
+      png: flagEntity.png,
+      svg: flagEntity.svg,
+      alt: flagEntity.alt
+    );
+  }
 }

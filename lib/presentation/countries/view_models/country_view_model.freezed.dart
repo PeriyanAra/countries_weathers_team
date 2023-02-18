@@ -263,7 +263,7 @@ class __$$_CountryViewModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CountryViewModel implements _CountryViewModel {
+class _$_CountryViewModel extends _CountryViewModel {
   const _$_CountryViewModel(
       {required this.name,
       required this.countryCode,
@@ -277,7 +277,8 @@ class _$_CountryViewModel implements _CountryViewModel {
       required this.flags,
       required this.coatOfArms})
       : _capital = capital,
-        _continents = continents;
+        _continents = continents,
+        super._();
 
   factory _$_CountryViewModel.fromJson(Map<String, dynamic> json) =>
       _$$_CountryViewModelFromJson(json);
@@ -375,7 +376,7 @@ class _$_CountryViewModel implements _CountryViewModel {
   }
 }
 
-abstract class _CountryViewModel implements CountryViewModel {
+abstract class _CountryViewModel extends CountryViewModel {
   const factory _CountryViewModel(
       {required final NameViewModel name,
       required final String countryCode,
@@ -388,6 +389,7 @@ abstract class _CountryViewModel implements CountryViewModel {
       required final List<String> continents,
       required final FlagViewModel flags,
       required final CoatOfArmsViewModel coatOfArms}) = _$_CountryViewModel;
+  const _CountryViewModel._() : super._();
 
   factory _CountryViewModel.fromJson(Map<String, dynamic> json) =
       _$_CountryViewModel.fromJson;
