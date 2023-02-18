@@ -6,7 +6,6 @@ packages:
     description:
       name: _fe_analyzer_shared
       sha256: "569ddca58d535e601dd1584afa117710abc999d036c0cd2c51777fb257df78e8"
-      sha256: "3444216bfd127af50bbe4862d8843ed44db946dd933554f0d7285e89f10e28ac"
       url: "https://pub.dev"
     source: hosted
     version: "53.0.0"
@@ -15,7 +14,6 @@ packages:
     description:
       name: analyzer
       sha256: "10927c4b7c7c88b1adbca278c3d5531db92e2f4b4abf04e2919a800af965f3f5"
-      sha256: "68796c31f510c8455a06fed75fc97d8e5ad04d324a830322ab3efc9feb6201c1"
       url: "https://pub.dev"
     source: hosted
     version: "5.5.0"
@@ -87,11 +85,7 @@ packages:
     dependency: transitive
     description:
       name: build_resolvers
-<<<<<<< HEAD
       sha256: db49b8609ef8c81cca2b310618c3017c00f03a92af44c04d310b907b2d692d95
-=======
-      sha256: "7c35a3a7868626257d8aee47b51c26b9dba11eaddf3431117ed2744951416aab"
->>>>>>> 19ae65c9de76183b9d3a246be154e3e646dc5f62
       url: "https://pub.dev"
     source: hosted
     version: "2.2.0"
@@ -227,11 +221,7 @@ packages:
     dependency: transitive
     description:
       name: fixnum
-<<<<<<< HEAD
       sha256: "25517a4deb0c03aa0f32fd12db525856438902d9c16536311e76cdc57b31d7d1"
-=======
-      sha256: "04be3e934c52e082558cc9ee21f42f5c1cd7a1262f4c63cd0357c08d5bba81ec"
->>>>>>> 19ae65c9de76183b9d3a246be154e3e646dc5f62
       url: "https://pub.dev"
     source: hosted
     version: "1.1.0"
