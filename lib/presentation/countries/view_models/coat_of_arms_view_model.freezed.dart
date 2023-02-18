@@ -107,8 +107,9 @@ class __$$_CoatOfArmsViewModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CoatOfArmsViewModel implements _CoatOfArmsViewModel {
-  const _$_CoatOfArmsViewModel({required this.png, required this.svg});
+class _$_CoatOfArmsViewModel extends _CoatOfArmsViewModel {
+  const _$_CoatOfArmsViewModel({required this.png, required this.svg})
+      : super._();
 
   factory _$_CoatOfArmsViewModel.fromJson(Map<String, dynamic> json) =>
       _$$_CoatOfArmsViewModelFromJson(json);
@@ -151,10 +152,11 @@ class _$_CoatOfArmsViewModel implements _CoatOfArmsViewModel {
   }
 }
 
-abstract class _CoatOfArmsViewModel implements CoatOfArmsViewModel {
+abstract class _CoatOfArmsViewModel extends CoatOfArmsViewModel {
   const factory _CoatOfArmsViewModel(
       {required final String png,
       required final String svg}) = _$_CoatOfArmsViewModel;
+  const _CoatOfArmsViewModel._() : super._();
 
   factory _CoatOfArmsViewModel.fromJson(Map<String, dynamic> json) =
       _$_CoatOfArmsViewModel.fromJson;
