@@ -107,8 +107,9 @@ class __$$_NameViewModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_NameViewModel implements _NameViewModel {
-  const _$_NameViewModel({required this.common, required this.official});
+class _$_NameViewModel extends _NameViewModel {
+  const _$_NameViewModel({required this.common, required this.official})
+      : super._();
 
   factory _$_NameViewModel.fromJson(Map<String, dynamic> json) =>
       _$$_NameViewModelFromJson(json);
@@ -151,10 +152,11 @@ class _$_NameViewModel implements _NameViewModel {
   }
 }
 
-abstract class _NameViewModel implements NameViewModel {
+abstract class _NameViewModel extends NameViewModel {
   const factory _NameViewModel(
       {required final String common,
       required final String official}) = _$_NameViewModel;
+  const _NameViewModel._() : super._();
 
   factory _NameViewModel.fromJson(Map<String, dynamic> json) =
       _$_NameViewModel.fromJson;

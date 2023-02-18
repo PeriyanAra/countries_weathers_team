@@ -118,9 +118,10 @@ class __$$_FlagViewModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_FlagViewModel implements _FlagViewModel {
+class _$_FlagViewModel extends _FlagViewModel {
   const _$_FlagViewModel(
-      {required this.png, required this.svg, required this.alt});
+      {required this.png, required this.svg, required this.alt})
+      : super._();
 
   factory _$_FlagViewModel.fromJson(Map<String, dynamic> json) =>
       _$$_FlagViewModelFromJson(json);
@@ -165,11 +166,12 @@ class _$_FlagViewModel implements _FlagViewModel {
   }
 }
 
-abstract class _FlagViewModel implements FlagViewModel {
+abstract class _FlagViewModel extends FlagViewModel {
   const factory _FlagViewModel(
       {required final String png,
       required final String svg,
       required final String alt}) = _$_FlagViewModel;
+  const _FlagViewModel._() : super._();
 
   factory _FlagViewModel.fromJson(Map<String, dynamic> json) =
       _$_FlagViewModel.fromJson;
