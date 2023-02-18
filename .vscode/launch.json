@@ -1,0 +1,22 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "countries_and_weathers",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "countries_and_weathers (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "countries_and_weathers (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+    ]
+}
