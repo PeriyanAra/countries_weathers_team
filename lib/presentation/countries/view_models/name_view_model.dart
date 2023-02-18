@@ -13,17 +13,18 @@ class NameViewModel with _$NameViewModel {
 
   factory NameViewModel.fromJson(Map<String, dynamic> json) => _$NameViewModelFromJson(json);
 
-     const NameViewModel._();
+  const NameViewModel._();
 
- CountryNameEntity toEntity() {
+  CountryNameEntity toEntity() {
     return CountryNameEntity(
       common: common,
-      official: official
+      official: official,
     );
   }
 
   factory NameViewModel.fromEntity(
-      CountryNameEntity countryNameEntity) {
+    CountryNameEntity countryNameEntity,
+  ) {
     return NameViewModel(
       common: countryNameEntity.common,
       official: countryNameEntity.official,
