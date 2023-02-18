@@ -5,4 +5,6 @@ abstract class CountryRepository {
   Future<Result<CountryEntity, FailureResult>> getCountryByName(
     String countryName,
   );
+
+  Future<Result<CountryEntity, FailureResult>> getAllCountries();
 }
