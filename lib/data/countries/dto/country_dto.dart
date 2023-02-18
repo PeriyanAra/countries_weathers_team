@@ -2,12 +2,12 @@
 import 'package:countries_and_weathers/presentation/countries/view_models/export.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'country_response.freezed.dart';
-part 'country_response.g.dart';
+part 'country_dto.freezed.dart';
+part 'country_dto.g.dart';
 
 @freezed
-class CountryResponse with _$CountryResponse {
-  const factory CountryResponse({
+class CountryDto with _$CountryDto {
+  const factory CountryDto({
     required NameViewModel name,
     required String countryCode,
     required List<String> capital,
@@ -19,9 +19,10 @@ class CountryResponse with _$CountryResponse {
     required List<String> continents,
     required FlagViewModel flags,
     required CoatOfArmsViewModel coatOfArms,
-  }) = _CountryResponse;
+  }) = _CountryDto;
 
-  factory CountryResponse.fromJson(Map<String, dynamic> json) => _$CountryResponseFromJson(json);
+  factory CountryDto.fromJson(Map<String, dynamic> json) => _$CountryDtoFromJson(json);
 }
+
 
 
