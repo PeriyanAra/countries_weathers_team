@@ -7,7 +7,7 @@ class CountriesState with _$CountriesState {
   const factory CountriesState.loading() = CountriesLoadingState;
 
   const factory CountriesState.loaded({
-    required List<CountryViewModel> countryViewModel,
+    required List<CountryViewModel> countriesViewModel,
   }) = CountriesLoadedState;
 
   const factory CountriesState.error({

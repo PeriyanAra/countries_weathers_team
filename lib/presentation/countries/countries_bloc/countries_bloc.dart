@@ -28,7 +28,7 @@ class CountriesBloc extends Bloc<CountriesEvent, CountriesState> {
     response.when(
       success: (data) => emit(
         CountriesState.loaded(
-          countryViewModel: data
+          countriesViewModel: data
               .map(
                 (countryEntity) => CountryViewModel.fromEntity(countryEntity: countryEntity),
               )
@@ -52,7 +52,7 @@ class CountriesBloc extends Bloc<CountriesEvent, CountriesState> {
     response.when(
       success: (data) => emit(
         CountriesState.loaded(
-          countryViewModel: data
+          countriesViewModel: data
               .map(
                 (countryEntity) => CountryViewModel.fromEntity(countryEntity: countryEntity),
               )
