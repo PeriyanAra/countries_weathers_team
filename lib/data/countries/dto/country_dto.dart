@@ -1,4 +1,3 @@
-
 import 'package:countries_and_weathers/presentation/countries/view_models/export.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -9,7 +8,7 @@ part 'country_dto.g.dart';
 class CountryDto with _$CountryDto {
   const factory CountryDto({
     required NameViewModel name,
-    required String countryCode,
+    @JsonKey(name: 'ccn3') required String countryCode,
     required List<String> capital,
     required String region,
     required String subregion,
@@ -22,7 +21,6 @@ class CountryDto with _$CountryDto {
   }) = _CountryDto;
 
   factory CountryDto.fromJson(Map<String, dynamic> json) => _$CountryDtoFromJson(json);
+  
+  const CountryDto._();
 }
-
-
-
